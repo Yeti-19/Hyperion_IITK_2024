@@ -3,10 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.optimize as sci
 
+# Run each case seperately for accurate outputs
+
+
 ### CASE 1 ###
 
 df=pd.read_csv('fast_cooling.csv')
-df2=df[df['Frequency']<1.0e+14]
+df2=df[df['Frequency']<1.0e+14]          # Condition for Case 1
 
 def func(a,b):
     return a*(df2['Frequency'])**b
@@ -32,7 +35,7 @@ plt.show()
 df=pd.read_csv('fast_cooling.csv')
 
 df2=df[df['Frequency']>1.0e+14]
-df2=df2[df2['Frequency']<1.0e+16]
+df2=df2[df2['Frequency']<1.0e+16]     # Condition for Case 2
 
 def func(a,b):
     return a*(df2['Frequency'])**b
