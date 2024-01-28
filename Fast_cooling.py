@@ -12,7 +12,7 @@ df=pd.read_csv('fast_cooling.csv')
 df2=df[df['Frequency']<1.0e+14]          # Condition for Case 1
 
 def func(a,b):
-    return a*(df2['Frequency'])**b
+    return a*(df2['Frequency'])**b       # Equation
 
 ydata=df2['Fv_fast_cooling']
 xdata=df2['Frequency']
@@ -38,7 +38,7 @@ df2=df[df['Frequency']>1.0e+14]
 df2=df2[df2['Frequency']<1.0e+16]     # Condition for Case 2
 
 def func(a,b):
-    return a*(df2['Frequency'])**b
+    return a*(df2['Frequency'])**b    # Equation
 
 ydata=df2['Fv_fast_cooling']
 xdata=df2['Frequency']
