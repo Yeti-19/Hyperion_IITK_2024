@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.optimize as sci
 
-### Case 1 ###
+### CASE 1 ###
 
 df=pd.read_csv('fast_cooling.csv')
 df2=df[df['Frequency']<1.0e+14]
@@ -27,7 +27,7 @@ plt.scatter(xdata,ydata)
 plt.show()
 
 
-### Case 2 ###
+### CASE 2 ###
 
 df=pd.read_csv('fast_cooling.csv')
 
