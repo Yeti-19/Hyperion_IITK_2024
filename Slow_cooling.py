@@ -5,11 +5,13 @@ import scipy.optimize as sci
 
 df=pd.read_csv('HYPERION IITK/slow_cooling.csv')
 
+# Run each case separately 
+
 ### CASE 1 ###
 
-df2=df[df['Frequency']<1.0e+10]
+df2=df[df['Frequency']<1.0e+10]          # Condition for Case 1
 def func(a,b):
-    return a*(df2['Frequency'])**b
+    return a*(df2['Frequency'])**b       # Equation
 
 fig = plt.figure("Case 1")
 
@@ -29,9 +31,9 @@ plt.show()
 ### CASE 2 ###
 
 df2=df[df['Frequency']>1.0e+10]
-df2=df2[df2['Frequency']<1.0e+16]
+df2=df2[df2['Frequency']<1.0e+16]        # Condition for Case 2
 def func(a,b):
-    return a*(df2['Frequency'])**b
+    return a*(df2['Frequency'])**b       # Equation
 
 fig = plt.figure("Case 2")
 
@@ -50,10 +52,10 @@ plt.show()
 
 ### CASE 3 ###
 
-df2=df[df['Frequency']>1.0e+16]
+df2=df[df['Frequency']>1.0e+16]          # Condition for Case 3
 
 def func(a,b):
-    return a*(df2['Frequency'])**b
+    return a*(df2['Frequency'])**b       # Equation
 
 fig = plt.figure("Case 3")
 
