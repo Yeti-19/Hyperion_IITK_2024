@@ -5,7 +5,7 @@ import scipy.optimize as sci
 
 df=pd.read_csv('HYPERION IITK/slow_cooling.csv')
 
-### Case 1 ###
+### CASE 1 ###
 
 df2=df[df['Frequency']<1.0e+10]
 def func(a,b):
@@ -26,7 +26,7 @@ plt.ylabel('Fv_slow_cooling', fontsize = 18)
 plt.scatter(xdata,ydata)
 plt.show()
 
-### Case 2 ###
+### CASE 2 ###
 
 df2=df[df['Frequency']>1.0e+10]
 df2=df2[df2['Frequency']<1.0e+16]
@@ -48,7 +48,7 @@ plt.ylabel('Fv_slow_cooling', fontsize = 18)
 plt.scatter(xdata,ydata)
 plt.show()
 
-### Case 3 ###
+### CASE 3 ###
 
 df2=df[df['Frequency']>1.0e+16]
 
